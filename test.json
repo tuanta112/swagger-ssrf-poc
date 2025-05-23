@@ -5,9 +5,9 @@
     "title": "Java SSRF Test",
     "description": "PoC for SSRF or File Read via Swagger on Java backend"
   },
-  "host": "127.0.0.1:80",
+  "host": "127.0.0.1:443",
   "basePath": "/",
-  "schemes": ["http"],
+  "schemes": ["https"],
   "paths": {
     "/proxy": {
       "get": {
