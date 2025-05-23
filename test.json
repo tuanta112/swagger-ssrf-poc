@@ -1,9 +1,9 @@
 {
   "swagger": "2.0",
   "info": {
-    "title": "SSRF Scan & LFD Test",
-    "description": "This is a fake API designed to trigger internal SSRF and Local File Disclosure vulnerabilities.",
-    "version": "1.0.0"
+    "version": "1.0.0",
+    "title": "Java SSRF Test",
+    "description": "PoC for SSRF or File Read via Swagger on Java backend"
   },
   "host": "127.0.0.1:80",
   "basePath": "/",
@@ -11,60 +11,60 @@
   "paths": {
     "/proxy": {
       "get": {
-        "summary": "SSRF Proxy Endpoint",
-        "description": "Pass any URL to be fetched by the server (potential SSRF).",
+        "summary": "SSRF GET Proxy",
+        "description": "Tries to fetch content from an arbitrary URL using server-side HTTP client",
         "parameters": [
           {
             "name": "url",
             "in": "query",
-            "description": "Target URL to fetch (can be file:// or http://internal-ip)",
+            "type": "string",
             "required": true,
-            "type": "string"
+            "description": "Example: http://localhost:8080/actuator/health"
           }
         ],
         "responses": {
           "200": {
-            "description": "Content of remote or local file"
+            "description": "Result of requested URL"
           }
         }
       }
     },
-    "/readfile": {
+    "/read": {
       "get": {
-        "summary": "Read local file (if SSRF supports file://)",
-        "description": "Attempts to read /etc/passwd or other local files via SSRF.",
+        "summary": "Read local file via SSRF",
+        "description": "Try file:// scheme to read local files on Java server (e.g. Tomcat)",
         "parameters": [
           {
-            "name": "path",
+            "name": "file",
             "in": "query",
-            "description": "Local file path to read (e.g., file:///etc/passwd)",
+            "type": "string",
             "required": true,
-            "type": "string"
+            "description": "Example: file:///etc/passwd"
           }
         ],
         "responses": {
           "200": {
-            "description": "Local file content"
+            "description": "File content"
           }
         }
       }
     },
     "/scan": {
       "get": {
-        "summary": "Internal Host Scanner",
-        "description": "Attempts to connect to internal IP ranges via SSRF.",
+        "summary": "Internal network port scan",
+        "description": "Scan local network IP/ports from server side",
         "parameters": [
           {
-            "name": "ip",
+            "name": "target",
             "in": "query",
-            "description": "Internal IP to scan (e.g. http://192.168.0.1:80)",
+            "type": "string",
             "required": true,
-            "type": "string"
+            "description": "Example: http://192.168.1.1:8080"
           }
         ],
         "responses": {
           "200": {
-            "description": "Scan result (open port or response)"
+            "description": "Scan result"
           }
         }
       }
