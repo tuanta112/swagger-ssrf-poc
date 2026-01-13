@@ -1,8 +1,8 @@
 {
-    "url": "https://raw.githubusercontent.com/tuanta112/swagger-ssrf-poc/refs/heads/main/test-xss.yaml",
+    "url": "https://raw.githubusercontent.com/tuanta112/swagger-ssrf-poc/refs/heads/main/test-xss.yaml?t=1",
     "urls": [
         {
-            "url": "https://raw.githubusercontent.com/tuanta112/swagger-ssrf-poc/refs/heads/main/test-xss.yaml",
+            "url": "https://raw.githubusercontent.com/tuanta112/swagger-ssrf-poc/refs/heads/main/test-xss.yaml?t=1",
             "name": "Foo"
         }
     ]
