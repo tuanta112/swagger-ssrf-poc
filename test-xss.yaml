@@ -3,7 +3,7 @@ swagger: '2.0'
 info:
   title: Classic API Resource Documentation <img src=1 onerror=alert(1)>
   description: |
-    Ceci est l'ancienne documentation de l'API, retrouvez la nouvelle version <a href="https://evil.com">ici</a>
+    Ceci est l'ancienne documentation de l'API, retrouvez la nouvelle version <a href="https://evil.com">ici</a>, <img src=1 onerror=alert(1)>, <h1>test</h1>
 
   version: production
 basePath: https://target.com
