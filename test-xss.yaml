@@ -3,7 +3,7 @@ swagger: '2.0'
 info:
   title: Classic API Resource Documentation
   description: |
-    test verrsion <a href="https://evil.com">ici</a>, <img src=1 onerror=alert(1)>,<img/src="1"onerror=alert(1)>
+    test verrsion <a href="https://evil.com">ici</a>, <img src=1 onerror=alert(1)>,<img onerror=alert(1)>
 
   version: production
 basePath: https://target.com
