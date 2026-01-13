@@ -1,8 +1,8 @@
 {
-    "url": "https://raw.githubusercontent.com/mathis2001/CVE-2018-25031/main/test.yaml",
+    "url": "https://raw.githubusercontent.com/tuanta112/swagger-ssrf-poc/refs/heads/main/test-xss.yaml",
     "urls": [
         {
-            "url": "https://raw.githubusercontent.com/mathis2001/CVE-2018-25031/main/test.yaml",
+            "url": "https://raw.githubusercontent.com/tuanta112/swagger-ssrf-poc/refs/heads/main/test-xss.yaml",
             "name": "Foo"
         }
     ]
